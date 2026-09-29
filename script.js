@@ -165,13 +165,17 @@ async function resolveReel(url, retries = 2) {
     new Error("Could not resolve this Reel.");
 }
 
-function triggerDownload(url, filename) {
+function triggerDownload(instagramUrl, filename) {
+  const downloadUrl =
+    API +
+    "?url=" +
+    encodeURIComponent(instagramUrl) +
+    "&download=1";
+
   const a = document.createElement("a");
 
-  a.href = url;
+  a.href = downloadUrl;
   a.download = filename;
-  a.target = "_blank";
-  a.rel = "noopener";
 
   document.body.appendChild(a);
   a.click();
