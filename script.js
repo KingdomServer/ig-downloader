@@ -213,19 +213,19 @@ async function processReel(url, index, item) {
     const result = await resolveReel(url);
 
     setItem(
-      item,
-      "running",
-      "Starting download...",
-      result.videoUrl
-    );
+  item,
+  "running",
+  "Starting download...",
+  url
+);
 
     const filename =
       `${String(index + 1).padStart(2, "0")}-instagram-reel.mp4`;
 
     triggerDownload(
-      result.videoUrl,
-      filename
-    );
+  url,
+  filename
+);
 
     setItem(
       item,
