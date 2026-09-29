@@ -7,35 +7,80 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <section class="card">
-      <div class="brand">
-        <div class="logo">↓</div>
-        <div>
-          <h1>Reel Downloader</h1>
-          <p>Download multiple public Instagram Reels at once.</p>
-        </div>
-      </div>
+<main class="app">
 
-      <label for="urls">Instagram Reel links</label>
-      <textarea id="urls" spellcheck="false"
-        placeholder="Paste one Instagram Reel URL per line&#10;&#10;https://www.instagram.com/reel/ABC123/&#10;https://www.instagram.com/reel/XYZ456/"></textarea>
+  <header class="header">
 
-      <div class="controls">
-        <button id="downloadBtn" type="button">
-          <span>↓</span> Download All
-        </button>
-        <button id="clearBtn" class="secondary" type="button">Clear</button>
-      </div>
+    <div class="logo">↓</div>
 
-      <div id="summary" class="summary hidden"></div>
-      <div id="results" class="results"></div>
+    <div>
+      <h1>Reel Downloader</h1>
 
-      <p class="note">
-        Public Instagram content only. Your browser may ask permission for multiple downloads.
+      <p>
+        Download public Instagram Reels quickly.
       </p>
-    </section>
-  </main>
+    </div>
+
+  </header>
+
+
+  <section class="card">
+
+    <label class="input-label" for="urls">
+      Instagram Reel links
+      <span>One per line</span>
+    </label>
+
+
+    <textarea
+      id="urls"
+      spellcheck="false"
+      placeholder="Paste your Instagram Reel links here...
+
+https://www.instagram.com/reel/ABC123/
+https://www.instagram.com/reel/XYZ456/"
+    ></textarea>
+
+
+    <div class="actions">
+
+      <button
+        id="downloadBtn"
+        type="button"
+      >
+        ↓ &nbsp; Download All
+      </button>
+
+      <button
+        id="clearBtn"
+        type="button"
+      >
+        Clear
+      </button>
+
+    </div>
+
+
+    <div
+      id="summary"
+      class="summary hidden"
+    ></div>
+
+
+    <div
+      id="results"
+      class="results"
+    ></div>
+
+
+    <p class="note">
+      Public Instagram content only.
+      Your browser may ask permission for multiple downloads.
+    </p>
+
+  </section>
+
+</main>
   <script src="script.js"></script>
 </body>
 </html>
