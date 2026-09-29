@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Reel Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <div class="brand">
+        <div class="logo">↓</div>
+        <div>
+          <h1>Reel Downloader</h1>
+          <p>Download multiple public Instagram Reels at once.</p>
+        </div>
+      </div>
+
+      <label for="urls">Instagram Reel links</label>
+      <textarea id="urls" spellcheck="false"
+        placeholder="Paste one Instagram Reel URL per line&#10;&#10;https://www.instagram.com/reel/ABC123/&#10;https://www.instagram.com/reel/XYZ456/"></textarea>
+
+      <div class="controls">
+        <button id="downloadBtn" type="button">
+          <span>↓</span> Download All
+        </button>
+        <button id="clearBtn" class="secondary" type="button">Clear</button>
+      </div>
+
+      <div id="summary" class="summary hidden"></div>
+      <div id="results" class="results"></div>
+
+      <p class="note">
+        Public Instagram content only. Your browser may ask permission for multiple downloads.
+      </p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
